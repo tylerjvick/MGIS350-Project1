@@ -1,0 +1,9 @@
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\bin\Debug\Project1.exe.config
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\bin\Debug\Project1.exe
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\bin\Debug\Project1.pdb
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\WindowsFormsApplication3.Form1.resources
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.Properties.Resources.resources
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.exe
+\\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.pdb
