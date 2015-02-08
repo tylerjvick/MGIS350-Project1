@@ -75,8 +75,17 @@ namespace MGIS350_Project
             int addInv = Convert.ToInt32(numAddInv.Value);
             // Add new value to selected inventory
             modDict[dictId] = modDict[dictId] + addInv;
+            // Prevent negative value in inventory
+            if (modDict[dictId] < 0)
+            {
+                modDict[dictId] = 0;
+            }
 
             updateLabels();
+            // Initialize OrderValidation class
+            var outside = new OrderValidation();
+            // see if inventory is checked (can be removed)
+            outside.checkInv(this);
         }
 
 

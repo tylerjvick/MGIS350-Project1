@@ -88,6 +88,11 @@
             0,
             0,
             0});
+            this.numAddInv.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
             this.numAddInv.Name = "numAddInv";
             this.numAddInv.Size = new System.Drawing.Size(77, 20);
             this.numAddInv.TabIndex = 3;
@@ -236,7 +241,7 @@
         private System.Windows.Forms.Label lblOrder;
         private System.Windows.Forms.NumericUpDown numOrder;
         private System.Windows.Forms.Label lblPizzaQty;
-        private System.Windows.Forms.CheckBox chkSauce;
+        public System.Windows.Forms.CheckBox chkSauce;
         private System.Windows.Forms.CheckBox chkCheese;
         private System.Windows.Forms.Button btnOrder;
     }
