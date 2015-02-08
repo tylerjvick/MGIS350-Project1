@@ -7,3 +7,12 @@
 \\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache
 \\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.exe
 \\svscbvuser02\users$\tjv1299\Documents\Visual Studio 2013\Projects\Project1\Project1\obj\Debug\Project1.pdb
+Z:\Visual Studio\MGIS350-Project1\Project1\bin\Debug\Project1.exe.config
+Z:\Visual Studio\MGIS350-Project1\Project1\obj\Debug\Project1.exe
+Z:\Visual Studio\MGIS350-Project1\Project1\obj\Debug\Project1.pdb
+Z:\Visual Studio\MGIS350-Project1\Project1\bin\Debug\Project1.exe
+Z:\Visual Studio\MGIS350-Project1\Project1\bin\Debug\Project1.pdb
+Z:\Visual Studio\MGIS350-Project1\Project1\obj\Debug\Project1.csprojResolveAssemblyReference.cache
+Z:\Visual Studio\MGIS350-Project1\Project1\obj\Debug\WindowsFormsApplication3.Form1.resources
+Z:\Visual Studio\MGIS350-Project1\Project1\obj\Debug\Project1.Properties.Resources.resources
+Z:\Visual Studio\MGIS350-Project1\Project1\obj\Debug\Project1.csproj.GenerateResource.Cache

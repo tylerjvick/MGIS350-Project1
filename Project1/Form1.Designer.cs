@@ -109,6 +109,7 @@
             this.btnAddInv.TabIndex = 5;
             this.btnAddInv.Text = "Submit";
             this.btnAddInv.UseVisualStyleBackColor = true;
+            this.btnAddInv.Click += new System.EventHandler(this.btnAddInv_Click);
             // 
             // lblDough
             // 
