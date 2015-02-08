@@ -17,33 +17,32 @@ namespace WindowsFormsApplication3
         {
             InitializeComponent();
         }
-
+        
+        // Create global dictionary to reference inventory values
         Dictionary<string, int> modDict = new Dictionary<string, int>();
+        // array to store inventory names
+        string[] invKeys = { "invDough", "invSauce", "invCheese" };
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Properties.Settings.Default["invDough"] = 1;
+            //Properties.Settings.Default["invSauce"] = 1;
             //Properties.Settings.Default.Save();
             //Console.WriteLine(Properties.Settings.Default["invDough"]);
             //int invDough = 0;
             //int invSauce = 0;
             //int invCheese = 0;
 
-            Dictionary<string, int> invDict = new Dictionary<string, int>();
-            
-            invDict.Add("invDough", 0);
-            invDict.Add("invSauce", 0);
-            invDict.Add("invCheese", 0);
-
-            foreach (KeyValuePair<string, int> entry in invDict)
+            foreach (string i in invKeys)
             {
 
-                var storedLabel = entry.Key.ToString();
+                var storedLabel = i;
                 var storedValue = Properties.Settings.Default[storedLabel];
                 Console.WriteLine(storedValue);
-                modDict[entry.Key] = Convert.ToInt32(storedValue);
+                modDict[i] = Convert.ToInt32(storedValue);
+
             }
 
+            // prints updated dictionary, can be removed
             foreach (KeyValuePair<string, int> kvp in modDict)
             {
                 Console.WriteLine("Key = {0}, Value = {1}",
@@ -62,6 +61,12 @@ namespace WindowsFormsApplication3
             lblSauce.Text = modDict["invSauce"].ToString();
 
             lblCheese.Text = modDict["invCheese"].ToString();
+
+            foreach (string s in invKeys)
+            {
+                Properties.Settings.Default[s] = modDict[s];
+                Properties.Settings.Default.Save();
+            }
 
         }
 
