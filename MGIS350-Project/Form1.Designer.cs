@@ -43,6 +43,7 @@
             this.chkSauce = new System.Windows.Forms.CheckBox();
             this.chkCheese = new System.Windows.Forms.CheckBox();
             this.btnOrder = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numAddInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numOrder)).BeginInit();
             this.SuspendLayout();
@@ -211,11 +212,22 @@
             this.btnOrder.UseVisualStyleBackColor = true;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(197, 40);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 15;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 248);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.chkCheese);
             this.Controls.Add(this.chkSauce);
@@ -258,6 +270,7 @@
         public System.Windows.Forms.CheckBox chkSauce;
         public System.Windows.Forms.CheckBox chkCheese;
         public System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 

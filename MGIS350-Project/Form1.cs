@@ -24,31 +24,17 @@ namespace MGIS350_Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Properties.Settings.Default["invSauce"] = 1;
-            //Properties.Settings.Default.Save();
-            //Console.WriteLine(Properties.Settings.Default["invDough"]);
-
+            // Load persistent values into modDict dictionary
             foreach (string i in invKeys)
             {
 
                 var storedLabel = i;
+                // Get individual value for each inventory
                 var storedValue = Properties.Settings.Default[storedLabel];
-                Console.WriteLine(storedValue);
+                // write inventory to dictionary
                 modDict[i] = Convert.ToInt32(storedValue);
 
             }
-
-            // prints updated dictionary, can be removed
-            foreach (KeyValuePair<string, int> kvp in modDict)
-            {
-                Console.WriteLine("Key = {0}, Value = {1}",
-                    kvp.Key, kvp.Value);
-            }
-
-            // Initialize OrderValidation class
-            var outside = new OrderValidation();
-            // Verify inventory is adequate
-            outside.checkInv(this, modDict);
 
             updateLabels();
         }
@@ -56,17 +42,23 @@ namespace MGIS350_Project
         private void updateLabels()
         {
             // Update forms labels to current values in modDict
-            lblDough.Text = modDict["invDough"].ToString();
+            // and append units to string
+            lblDough.Text = modDict["invDough"].ToString() + " lb(s)";
 
-            lblSauce.Text = modDict["invSauce"].ToString();
+            lblSauce.Text = modDict["invSauce"].ToString() + " oz";
 
-            lblCheese.Text = modDict["invCheese"].ToString();
-
+            lblCheese.Text = modDict["invCheese"].ToString() + " oz";
+            // Save all values from modDict to persistent storage
             foreach (string s in invKeys)
             {
                 Properties.Settings.Default[s] = modDict[s];
                 Properties.Settings.Default.Save();
             }
+
+            // Initialize OrderValidation class
+            var outside = new OrderValidation();
+            // Verify inventory is adequate
+            outside.checkInv(this, modDict);
 
         }
 
@@ -93,35 +85,58 @@ namespace MGIS350_Project
         private void btnOrder_Click(object sender, EventArgs e)
         {
 
+            int pizzaQty = Convert.ToInt32(numOrder.Value);
+
+            if (chkSauce.Checked)
+            {
+                modDict["invSauce"] = modDict["invSauce"] - (Constants.reqSauce * pizzaQty);
+            }
+
+            if (chkCheese.Checked)
+            {
+                modDict["invCheese"] = modDict["invCheese"] - (Constants.reqCheese * pizzaQty);
+            }
+
+            modDict["invDough"] = modDict["invDough"] - (Constants.reqDough * pizzaQty);
+
+            updateLabels();
+
         }
 
         private void numOrder_ValueChanged(object sender, EventArgs e)
         {
 
-            // Initialize OrderValidation class
-            var outside = new OrderValidation();
-            // Verify inventory is adequate
-            outside.checkInv(this, modDict);
+            updateLabels();
 
         }
 
         private void chkSauce_CheckedChanged(object sender, EventArgs e)
         {
 
-            // Initialize OrderValidation class
-            var outside = new OrderValidation();
-            // Verify inventory is adequate
-            outside.checkInv(this, modDict);
+            updateLabels();
 
         }
 
         private void chkCheese_CheckedChanged(object sender, EventArgs e)
         {
 
-            // Initialize OrderValidation class
-            var outside = new OrderValidation();
-            // Verify inventory is adequate
-            outside.checkInv(this, modDict);
+            updateLabels();
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("Are you sure you want to clear all inventory?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                foreach (var key in modDict.Keys.ToList())
+                {
+                    modDict[key] = 0;
+                }
+                updateLabels();
+            }
 
         }
 
