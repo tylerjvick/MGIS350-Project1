@@ -45,6 +45,11 @@ namespace MGIS350_Project
                     kvp.Key, kvp.Value);
             }
 
+            // Initialize OrderValidation class
+            var outside = new OrderValidation();
+            // Verify inventory is adequate
+            outside.checkInv(this, modDict);
+
             updateLabels();
         }
 
@@ -82,10 +87,42 @@ namespace MGIS350_Project
             }
 
             updateLabels();
+
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numOrder_ValueChanged(object sender, EventArgs e)
+        {
+
             // Initialize OrderValidation class
             var outside = new OrderValidation();
-            // see if inventory is checked (can be removed)
-            outside.checkInv(this);
+            // Verify inventory is adequate
+            outside.checkInv(this, modDict);
+
+        }
+
+        private void chkSauce_CheckedChanged(object sender, EventArgs e)
+        {
+
+            // Initialize OrderValidation class
+            var outside = new OrderValidation();
+            // Verify inventory is adequate
+            outside.checkInv(this, modDict);
+
+        }
+
+        private void chkCheese_CheckedChanged(object sender, EventArgs e)
+        {
+
+            // Initialize OrderValidation class
+            var outside = new OrderValidation();
+            // Verify inventory is adequate
+            outside.checkInv(this, modDict);
+
         }
 
 

@@ -155,9 +155,20 @@
             // numOrder
             // 
             this.numOrder.Location = new System.Drawing.Point(12, 142);
+            this.numOrder.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numOrder.Name = "numOrder";
             this.numOrder.Size = new System.Drawing.Size(77, 20);
             this.numOrder.TabIndex = 10;
+            this.numOrder.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numOrder.ValueChanged += new System.EventHandler(this.numOrder_ValueChanged);
             // 
             // lblPizzaQty
             // 
@@ -177,6 +188,7 @@
             this.chkSauce.TabIndex = 12;
             this.chkSauce.Text = "Sauce";
             this.chkSauce.UseVisualStyleBackColor = true;
+            this.chkSauce.CheckedChanged += new System.EventHandler(this.chkSauce_CheckedChanged);
             // 
             // chkCheese
             // 
@@ -187,6 +199,7 @@
             this.chkCheese.TabIndex = 13;
             this.chkCheese.Text = "Cheese";
             this.chkCheese.UseVisualStyleBackColor = true;
+            this.chkCheese.CheckedChanged += new System.EventHandler(this.chkCheese_CheckedChanged);
             // 
             // btnOrder
             // 
@@ -196,6 +209,7 @@
             this.btnOrder.TabIndex = 14;
             this.btnOrder.Text = "Place Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // Form1
             // 
@@ -239,11 +253,11 @@
         private System.Windows.Forms.Label lblSauce;
         private System.Windows.Forms.Label lblCheese;
         private System.Windows.Forms.Label lblOrder;
-        private System.Windows.Forms.NumericUpDown numOrder;
+        public System.Windows.Forms.NumericUpDown numOrder;
         private System.Windows.Forms.Label lblPizzaQty;
         public System.Windows.Forms.CheckBox chkSauce;
-        private System.Windows.Forms.CheckBox chkCheese;
-        private System.Windows.Forms.Button btnOrder;
+        public System.Windows.Forms.CheckBox chkCheese;
+        public System.Windows.Forms.Button btnOrder;
     }
 }
 
