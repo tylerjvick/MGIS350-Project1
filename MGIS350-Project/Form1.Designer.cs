@@ -162,6 +162,7 @@
             0,
             0});
             this.numOrder.Name = "numOrder";
+            this.numOrder.ReadOnly = true;
             this.numOrder.Size = new System.Drawing.Size(77, 20);
             this.numOrder.TabIndex = 10;
             this.numOrder.Value = new decimal(new int[] {
