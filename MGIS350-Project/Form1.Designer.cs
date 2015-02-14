@@ -170,7 +170,7 @@
             0,
             0,
             0});
-            this.numOrder.ValueChanged += new System.EventHandler(this.numOrder_ValueChanged);
+            this.numOrder.ValueChanged += new System.EventHandler(this.updateLabels);
             // 
             // lblPizzaQty
             // 
@@ -190,7 +190,7 @@
             this.chkSauce.TabIndex = 12;
             this.chkSauce.Text = "Sauce";
             this.chkSauce.UseVisualStyleBackColor = true;
-            this.chkSauce.CheckedChanged += new System.EventHandler(this.chkSauce_CheckedChanged);
+            this.chkSauce.CheckedChanged += new System.EventHandler(this.updateLabels);
             // 
             // chkCheese
             // 
@@ -201,7 +201,7 @@
             this.chkCheese.TabIndex = 13;
             this.chkCheese.Text = "Cheese";
             this.chkCheese.UseVisualStyleBackColor = true;
-            this.chkCheese.CheckedChanged += new System.EventHandler(this.chkCheese_CheckedChanged);
+            this.chkCheese.CheckedChanged += new System.EventHandler(this.updateLabels);
             // 
             // btnOrder
             // 

@@ -36,10 +36,10 @@ namespace MGIS350_Project
 
             }
 
-            updateLabels();
+            updateLabels(this, e);
         }
 
-        private void updateLabels()
+        private void updateLabels(object sender, EventArgs e)
         {
             // Update forms labels to current values in modDict
             // and append units to string
@@ -79,7 +79,7 @@ namespace MGIS350_Project
                 modDict[dictId] = 0;
             }
 
-            updateLabels();
+            updateLabels(this, e);
 
         }
 
@@ -100,28 +100,7 @@ namespace MGIS350_Project
 
             modDict["invDough"] = modDict["invDough"] - (Constants.reqDough * pizzaQty);
 
-            updateLabels();
-
-        }
-
-        private void numOrder_ValueChanged(object sender, EventArgs e)
-        {
-
-            updateLabels();
-
-        }
-
-        private void chkSauce_CheckedChanged(object sender, EventArgs e)
-        {
-
-            updateLabels();
-
-        }
-
-        private void chkCheese_CheckedChanged(object sender, EventArgs e)
-        {
-
-            updateLabels();
+            updateLabels(this, e);
 
         }
 
@@ -136,7 +115,7 @@ namespace MGIS350_Project
                 {
                     modDict[key] = 0;
                 }
-                updateLabels();
+                updateLabels(this, e);
             }
 
         }
