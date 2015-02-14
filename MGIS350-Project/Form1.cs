@@ -64,15 +64,16 @@ namespace MGIS350_Project
 
         private void btnAddInv_Click(object sender, EventArgs e)
         {
-            //find checked radio button
+            // find checked radio button
             var checkedButton = Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
-            //Create identifying key for modDict
+            // Create identifying key for modDict
             var dictId = "inv" + checkedButton;
-            //get value of number selector numAddInv
+            // get value of number selector numAddInv
             int addInv = Convert.ToInt32(numAddInv.Value);
             // Add new value to selected inventory
             modDict[dictId] = modDict[dictId] + addInv;
-            // Prevent negative value in inventory
+            // Prevent negative value in inventory, 
+            // but allow decrement of inventory if negative value is entered
             if (modDict[dictId] < 0)
             {
                 modDict[dictId] = 0;
