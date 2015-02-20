@@ -85,36 +85,41 @@ namespace MGIS350_Project
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-
+            // Get desired number of pizzas to order, and convert to int
+            // when "Place Order" is clicked
             int pizzaQty = Convert.ToInt32(numOrder.Value);
-
+            // If "sauce" is checked, subtract the amount needed from sauce inventory
+            // (constant sauce val * number of pizzas ordered)
             if (chkSauce.Checked)
             {
                 modDict["invSauce"] = modDict["invSauce"] - (Constants.reqSauce * pizzaQty);
             }
-
+            // If "cheese" is checked, subtract the amount needed from cheese inventory
+            // (constant cheese val * number of pizzas ordered)
             if (chkCheese.Checked)
             {
                 modDict["invCheese"] = modDict["invCheese"] - (Constants.reqCheese * pizzaQty);
             }
-
+            // Subtract the amount of dough required from the dough inventory
+            // (constant dough val times number of pizzas ordered)
             modDict["invDough"] = modDict["invDough"] - (Constants.reqDough * pizzaQty);
-
+            // Update inventory labels, grey out place order btn if requirements aren't met
             updateLabels(this, e);
 
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            // Prompt user for confirmation of zeroing out inventory
             DialogResult result = MessageBox.Show("Are you sure you want to clear all inventory?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
+            // If user confirms reset, set each modDict value to 0
             if (result == DialogResult.Yes)
             {
                 foreach (var key in modDict.Keys.ToList())
                 {
                     modDict[key] = 0;
                 }
+                // Update inventory labels (to 0) and grey out place order button
                 updateLabels(this, e);
             }
 
