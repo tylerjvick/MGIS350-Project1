@@ -114,4 +114,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Form1_UpdateLabels__lb_s_" xml:space="preserve">
+    <value> lb(s)</value>
+  </data>
+  <data name="Form1_btnReset_Click_Are_you_sure_you_want_to_clear_all_inventory_" xml:space="preserve">
+    <value>Are you sure you want to clear all inventory?</value>
+  </data>
+  <data name="Form1_UpdateLabels__oz" xml:space="preserve">
+    <value> oz</value>
+  </data>
 </root>

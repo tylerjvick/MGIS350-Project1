@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MGIS350_Project
+﻿namespace MGIS350_Project
 {
     public static class Constants
     {
 
-        public const int reqDough = 2;
+        public const int ReqDough = 2;
 
-        public const int reqSauce = 5;
+        public const int ReqSauce = 5;
 
-        public const int reqCheese = 8;
+        public const int ReqCheese = 8;
 
     }
 }

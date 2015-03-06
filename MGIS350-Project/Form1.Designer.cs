@@ -1,11 +1,14 @@
-﻿namespace MGIS350_Project
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace MGIS350_Project
 {
     partial class Form1
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -170,7 +173,7 @@
             0,
             0,
             0});
-            this.numOrder.ValueChanged += new System.EventHandler(this.updateLabels);
+            this.numOrder.ValueChanged += new System.EventHandler(this.UpdateLabels);
             // 
             // lblPizzaQty
             // 
@@ -190,7 +193,7 @@
             this.chkSauce.TabIndex = 12;
             this.chkSauce.Text = "Sauce";
             this.chkSauce.UseVisualStyleBackColor = true;
-            this.chkSauce.CheckedChanged += new System.EventHandler(this.updateLabels);
+            this.chkSauce.CheckedChanged += new System.EventHandler(this.UpdateLabels);
             // 
             // chkCheese
             // 
@@ -201,7 +204,7 @@
             this.chkCheese.TabIndex = 13;
             this.chkCheese.Text = "Cheese";
             this.chkCheese.UseVisualStyleBackColor = true;
-            this.chkCheese.CheckedChanged += new System.EventHandler(this.updateLabels);
+            this.chkCheese.CheckedChanged += new System.EventHandler(this.UpdateLabels);
             // 
             // btnOrder
             // 
@@ -256,22 +259,22 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton rdoDough;
-        private System.Windows.Forms.RadioButton rdoSauce;
-        private System.Windows.Forms.RadioButton rdoCheese;
-        private System.Windows.Forms.NumericUpDown numAddInv;
-        private System.Windows.Forms.Label lblAddInv;
-        private System.Windows.Forms.Button btnAddInv;
-        private System.Windows.Forms.Label lblDough;
-        private System.Windows.Forms.Label lblSauce;
-        private System.Windows.Forms.Label lblCheese;
-        private System.Windows.Forms.Label lblOrder;
-        public System.Windows.Forms.NumericUpDown numOrder;
-        private System.Windows.Forms.Label lblPizzaQty;
-        public System.Windows.Forms.CheckBox chkSauce;
-        public System.Windows.Forms.CheckBox chkCheese;
-        public System.Windows.Forms.Button btnOrder;
-        private System.Windows.Forms.Button btnReset;
+        private RadioButton rdoDough;
+        private RadioButton rdoSauce;
+        private RadioButton rdoCheese;
+        private NumericUpDown numAddInv;
+        private Label lblAddInv;
+        private Button btnAddInv;
+        private Label lblDough;
+        private Label lblSauce;
+        private Label lblCheese;
+        private Label lblOrder;
+        public NumericUpDown numOrder;
+        private Label lblPizzaQty;
+        public CheckBox chkSauce;
+        public CheckBox chkCheese;
+        public Button btnOrder;
+        private Button btnReset;
     }
 }
 

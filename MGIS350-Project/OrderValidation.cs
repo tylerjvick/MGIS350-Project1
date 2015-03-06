@@ -1,44 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MGIS350_Project
 {
     class OrderValidation
     {
-        public bool checkInv(Form1 F, Dictionary<string, int> modDict)
+        public bool CheckInv(Form1 f, Dictionary<string, int> modDict)
         {
 
-            int pizzaQty = Convert.ToInt32(F.numOrder.Value);
+            int pizzaQty = Convert.ToInt32(f.numOrder.Value);
 
-            if (modDict["invDough"] < (Constants.reqDough * pizzaQty))
+            if (modDict["invDough"] < (Constants.ReqDough * pizzaQty))
             {
-                F.btnOrder.Enabled = false;
+                f.btnOrder.Enabled = false;
                 return false;
             }
 
-            if (F.chkSauce.Checked)
+            if (f.chkSauce.Checked)
             {
-                if (modDict["invSauce"] < (Constants.reqSauce * pizzaQty))
+                if (modDict["invSauce"] < (Constants.ReqSauce * pizzaQty))
                 {
-                    F.btnOrder.Enabled = false;
+                    f.btnOrder.Enabled = false;
                     return false;
                 }
 
             }
 
-            if (F.chkCheese.Checked)
+            if (f.chkCheese.Checked)
             {
-                if (modDict["invCheese"] < (Constants.reqCheese * pizzaQty))
+                if (modDict["invCheese"] < (Constants.ReqCheese * pizzaQty))
                 {
-                    F.btnOrder.Enabled = false;
+                    f.btnOrder.Enabled = false;
                     return false;
                 }
             }
 
-            F.btnOrder.Enabled = true;
+            f.btnOrder.Enabled = true;
             return true;
 
         }
